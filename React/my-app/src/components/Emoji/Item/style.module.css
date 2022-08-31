@@ -1,0 +1,15 @@
+.emItem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.emSymbol {
+    padding: 20px;
+}
+
+.keywords {
+    text-align: right;
+  }
