@@ -12,3 +12,11 @@
     font-size: 16px;
     color: black;
 }
+
+.login {
+    width: 300px;
+    height: 50px;
+    background: #F5F9FF;
+    border: 4px solid #82A9FF;
+    border-radius: 20px;
+}

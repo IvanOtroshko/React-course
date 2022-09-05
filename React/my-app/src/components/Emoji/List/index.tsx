@@ -1,7 +1,6 @@
 import { ChangeEventHandler, useState } from "react";
 import { generateUniqId } from "../../../mocks";
 import { Input } from "../../Input";
-
 import { emojies } from "../ConstEmoji";
 import { EmojiRow } from "../Item";
 import style from "./style.module.css";
@@ -23,7 +22,7 @@ export const EmojiList = () => {
 
   return (
     <div className={style.container}>
-      <Input value={text} onChange={handleOnChange} />
+      <Input type="login" value={text} onChange={handleOnChange} />
       <div className={style.emojContainer}>
         {filteredEmojies.map((item) => {
           return (
