@@ -4,9 +4,12 @@ import { Clicker } from "./components/Clicker";
 import { EmojiList } from "./components/Emoji/List";
 import { Input } from "./components/Input";
 import { PostList } from "./components/Posts/List";
+import { Login } from "./components/Registration";
+import { Timer } from "./components/Timer";
 import { Title } from "./components/Title";
 import { UserCard } from "./components/User";
 import { posts } from "./mocks";
+import { Time } from "./Time";
 
 
 function App() {
@@ -28,11 +31,14 @@ function App() {
       <Button text="Login" onClick={onClickLogin} />
       <Button text="Sign up" onClick={onClickSignUp} />
       <Button text="Logout" onClick={onClickLogout} /> */}
-      {/* <Input value="hi" placeholder='Введите логин' onChange={()=>{}}/> */}
+      {/* <Input  placeholder='Введите логин' onChange={() => { } } type={"login"}/> */}
       {/* <UserCard UserName={"Ivan Otroshko"} />  */}
       {/* <Clicker/> */}
-      <PostList posts={posts}/>
-      <EmojiList></EmojiList>
+      {/* <PostList posts={posts}/> */}
+      {/* <EmojiList></EmojiList> */}
+      {/* <Login/> */}
+      <Timer/>
+      <Time/>
     </div>
    
   );
