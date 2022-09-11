@@ -5,7 +5,7 @@ import { UserCard } from "../User";
 import style from "./style.module.css";
 
 
-export const Login = () => {
+export const RegistrationForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

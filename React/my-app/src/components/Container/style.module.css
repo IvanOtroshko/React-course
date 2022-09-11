@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+  background: white;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.darkContainer {
+  background: #000;
+  margin: 0 auto;
+  height: 50vw;
+}
+
+.vector {
+  position: absolute;
+  right: 0px;
+  
+
+
+
+}

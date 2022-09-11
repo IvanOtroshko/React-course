@@ -1,0 +1,40 @@
+.container {
+    width: 380px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 25px;
+    letter-spacing: 0.03em;
+    color: #254050;
+}
+
+
+h3 {
+    margin: 0 0 -20px 36px;
+    text-align: left;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+
+    color: #254050;
+}
+
+a {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: #016EFC;
+}

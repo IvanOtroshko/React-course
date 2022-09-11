@@ -1,47 +1,27 @@
+import { createContext, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import { Button } from "./components/Button";
-import { Clicker } from "./components/Clicker";
-import { EmojiList } from "./components/Emoji/List";
-import { Input } from "./components/Input";
-import { PostList } from "./components/Posts/List";
-import { Login } from "./components/Registration";
-import { Timer } from "./components/Timer";
-import { Title } from "./components/Title";
-import { UserCard } from "./components/User";
-import { posts } from "./mocks";
-import { Time } from "./Time";
+import { RootRouter } from "./router";
 
 
-function App() {
-  const onClickLogin = () => {
-    alert("Login");
-  };
+  export const Context = createContext<{
+    isDark: boolean;
+    setIsDark: (value: boolean) => void;
+  }>({ isDark: false, setIsDark: () => { } });
 
-  const onClickSignUp = () => {
-    alert("SignUp");
-  };
+  function App() {
+    const [isDark, setIsDark] = useState(false);
 
-  const onClickLogout = () => {
-    alert("Logout");
-  };
+    return (
+      <div className="App">
+     <BrowserRouter>
+      <Context.Provider value={{ isDark: isDark, setIsDark: setIsDark }}>
+        <RootRouter />
+      </Context.Provider>
+    </BrowserRouter>
+      </div>
 
-  return (
-    <div className="App">
-      {/* <Title text="Hi React"/>
-      <Button text="Login" onClick={onClickLogin} />
-      <Button text="Sign up" onClick={onClickSignUp} />
-      <Button text="Logout" onClick={onClickLogout} /> */}
-      {/* <Input  placeholder='Введите логин' onChange={() => { } } type={"login"}/> */}
-      {/* <UserCard UserName={"Ivan Otroshko"} />  */}
-      {/* <Clicker/> */}
-      {/* <PostList posts={posts}/> */}
-      {/* <EmojiList></EmojiList> */}
-      {/* <Login/> */}
-      <Timer/>
-      <Time/>
-    </div>
-   
-  );
-}
+    );
+  }
 
-export default App;
+  export default App;
