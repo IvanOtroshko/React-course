@@ -1,14 +1,34 @@
-import { IPost } from "../../Types/post";
 import style from "./style.module.css";
+import { ReactEventHandler, useState } from "react";
+import { IPost } from "../../Types/post";
+import picture from "./picture.jpg"
 
+interface IProps extends IPost {
+  isLarge?: boolean;
+}
 
-export const ItemOfPost = (props: IPost) => {
+export const PostItem = (props: IProps) => {
+  const [image, setImage] = useState(props.image);
+
+  const handleError: ReactEventHandler<HTMLImageElement> = () => {
+    setImage("/picture.jpg");
+  };
+
   return (
-    <div className={style.container}>
-      <img className={style.image} src={props.image} alt={props.title} />
-      <h2 className={style.title}>{props.title}</h2>
+    <div className={`${style.post} ${props.isLarge ? style.largePost : ""}`}>
+      {image ? (
+        <img
+          className={`${style.image} ${props.isLarge ? style.largeImage : ""}`}
+          src={image}
+          alt={props.title}
+          onError={handleError}
+        />
+      ) : (
+        <img className={style.image} src={picture} alt={props.title} />
+      )}
+      <h3 className={style.title}>{props.title}</h3>
       <p className={style.text}>{props.text}</p>
-      <h5 className={style.date}>{props.date}</h5>
+      <p className={style.date}>{props.date}</p>
     </div>
   );
 };

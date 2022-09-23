@@ -1,45 +1,57 @@
-.container {
-    width: 300px;
-    height: 300px;
-    padding: 30px 21px 30px 24px;
-    margin-bottom: 30px;
-    margin-right: 40px;
-    background-color: white;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .post {
+    max-width: 341px;
+    max-height: 296px;
+    padding: 28px 21px 24px 17px;
+    box-shadow: 0px 6px 50px rgba(184, 196, 209, 0.15);
     border-radius: 13px;
-    /* position: relative; */
-    background-color: cornsilk;
-
+    background-color: white;
   }
-
+  
+  .largePost {
+    max-width: 600px;
+    max-height: 400px;
+  }
+  
   .image {
-    width: 250px;
+    width: 296px;
     height: 120px;
-    margin: 0 auto;
-    border-radius: 20px;
+    border: 1px solid #ebebeb;
+    border-radius: 11px;
+    background-size: cover;
+    margin-bottom: 2px;
   }
+  
+  .largeImage {
+    width: 550px;
+    height: 240px;
+  }
+  
   .title {
     font-family: "Raleway";
     font-weight: 600;
     font-size: 20px;
-    text-align: left;
     line-height: 23px;
-    color: #000000;
-    padding: 0 24px;
+    color: #4f4f4f;
+    margin-bottom: 16px;
   }
   .text {
-    height: 80px;
+    width: 303px;
     font-family: "Raleway";
+    font-weight: 400;
+    font-size: 16px;
     line-height: 19px;
-    text-align: left;
-    padding: 0 24px;
-    color: #242323;
-    overflow: hidden;
+    color: #979797;
+    margin-bottom: 25px;
   }
   .date {
     font-family: "Raleway";
     font-weight: 400;
-    line-height: 20px;
-    text-align: left;
-    padding: 0 24px;
-    color: #161d25;
+    font-size: 16px;
+    line-height: 19px;
+    color: #016efc;
   }
