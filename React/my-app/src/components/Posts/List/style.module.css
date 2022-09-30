@@ -1,8 +1,7 @@
 
 .container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #585454;
-    padding: 20px 15px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  padding: 15px;
+}
